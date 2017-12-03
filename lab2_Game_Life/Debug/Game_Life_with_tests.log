@@ -1,0 +1,20 @@
+﻿Сборка начата 04.12.2017 0:02:03.
+     1>Проект "g:\2 курс\ООП\Лабы\Game_Life_with_tests\Game_Life_with_tests\Game_Life_with_tests.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"g:\2 курс\ООП\Лабы\Game_Life_with_tests\packages\gmock.1.7.0\build\native\..\..\lib\native\include\\" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "G:\2 курс\ООП\Лабы\lab2_game_life\lab2_game_life\Game_Process.cpp"
+         Game_Process.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\2 курс\ООП\Лабы\Game_Life_with_tests\Debug\Game_Life_with_tests.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\2 курс\ООП\Лабы\Game_Life_with_tests\Debug\Game_Life_with_tests.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\2 курс\ООП\Лабы\Game_Life_with_tests\Debug\Game_Life_with_tests.lib" /MACHINE:X86 Debug\Cell.obj
+         Debug\Field.obj
+         Debug\Game_Process.obj
+         Debug\main.obj
+         Debug\My_exception.obj
+         Debug\test.obj
+         "Debug\gtest-all.obj"
+         "Debug\gmock-all.obj"
+         Game_Life_with_tests.vcxproj -> G:\2 курс\ООП\Лабы\Game_Life_with_tests\Debug\Game_Life_with_tests.exe
+     1>Сборка проекта "g:\2 курс\ООП\Лабы\Game_Life_with_tests\Game_Life_with_tests\Game_Life_with_tests.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:06.43
