@@ -4,43 +4,43 @@ namespace Life{
 
 	void Game::start() {
 		system("cls");
-		printf("\n Current step: %d \n", steps);
-		field.print_field();
-		printf("________________________\n\n");
-		printf(" Input the next command: ");
+		std::cout<<"\n Current step:"<< steps<<std::endl;
+		std::cout << field << std::endl;
+		std::cout << "________________________" << std::endl << std::endl;
+		std::cout<<" Input the next command: ";
 	};
 
 	void Game::set(int i, int j) {
 		field.create_cell(i, j);
 		system("cls");
-		printf("\n Current step: %d \n", steps);
-		field.print_field();
-		printf("________________________\n\n");
-		printf(" Input the next command: ");
+		std::cout<<"\n Current step:"<< steps<<std::endl;
+		std::cout << field << std::endl;
+		std::cout << "________________________" << std::endl << std::endl;
+		std::cout<<" Input the next command: ";
 	};
 
 	void Game::random_set(int amount) {
 		if (amount > field.count_cells() || amount < 0) {
-			printf("");
+			std::cout<<"";
 			return;
 		}
 		for (int i = 0; i < amount; i++) {
 			field.random_creation();
 		}
 		system("cls");
-		printf("\n Current step: %d \n", steps);
-		field.print_field();
-		printf("________________________\n\n");
-		printf(" Input the next command: ");
+		std::cout<<"\n Current step:"<< steps<<std::endl ;
+		std::cout << field << std::endl;
+		std::cout << "________________________" << std::endl << std::endl;
+		std::cout<<" Input the next command: ";
 	}
 
 	void Game::clear(int i, int j) {
 		field.delete_cell(i, j);
 		system("cls");
-		printf("\n Current step: %d \n", steps);
-		field.print_field();
-		printf("________________________\n\n");
-		printf(" Input the next command: ");
+		std::cout<<"\n Current step:"<<steps<<std::endl;
+		std::cout<<field<<std::endl;
+		std::cout << "________________________" << std::endl << std::endl;
+		std::cout<<" Input the next command: ";
 	}
 
 	void Game::back() {
@@ -50,10 +50,10 @@ namespace Life{
 		field.step_back();
 		steps--;
 		system("cls");
-		printf("\n Current step: %d \n", steps);
-		field.print_field();
-		printf("________________________\n\n");
-		printf(" Input the next command: ");
+		std::cout<<"\n Current step:"<<steps<<std::endl;
+		std::cout<<field<<std::endl;
+		std::cout << "________________________" << std::endl << std::endl;
+		std::cout<<" Input the next command: ";
 	}
 
 	void Game::step(int N) {
@@ -67,17 +67,17 @@ namespace Life{
 		}
 		if (res == "") {
 			system("cls");
-			printf("\n Current step: %d \n", steps);
-			field.print_field();
-			printf("________________________\n\n");
-			printf(" Input the next command: ");
+			std::cout<<"\n Current step:"<<steps<<std::endl;
+			std::cout<<field<<std::endl;
+			std::cout << "________________________" << std::endl << std::endl;
+			std::cout<<" Input the next command: ";
 		}
 		else {
 			system("cls");
-			printf("\n Game is ended on %d step: %s\n\n", steps, res.c_str());
-			printf(" Load saving game or reset field \n\n");
-			printf("________________________\n\n");
-			printf(" Input the next command: ");
+			std::cout << "\n Game is ended on" << steps << "step:" << res.c_str() << std::endl << std::endl;
+			std::cout << " Load saving game or reset field " << std::endl << std::endl;
+			std::cout << "________________________" << std::endl << std::endl;
+			std::cout<<" Input the next command: ";
 		}
 	}
 
@@ -85,10 +85,10 @@ namespace Life{
 		field.delete_all_cells();
 		steps = 0;
 		system("cls");
-		printf("\n Current step: %d \n", steps);
-		field.print_field();
-		printf("________________________\n\n");
-		printf(" Input the next command: ");
+		std::cout<<"\n Current step:"<<steps<<std::endl;
+		std::cout<<field<<std::endl;
+		std::cout << "________________________" << std::endl << std::endl;
+		std::cout<<" Input the next command: ";
 	}
 
 	void Game::save(std::string filename) {
@@ -100,9 +100,9 @@ namespace Life{
 		field.load_to_file(&fout);
 		fout.close();
 		system("cls");
-		printf("\n Game has been saving\n\n");
-		printf("________________________\n\n");
-		printf(" Input the next command: ");
+		std::cout << "\n Game has been saving" << std::endl << std::endl;
+		std::cout << "________________________" << std::endl << std::endl;
+		std::cout<<" Input the next command: ";
 	}
 
 	void Game::load(std::string filename) {
@@ -115,18 +115,23 @@ namespace Life{
 		fin.close();
 		steps = 0;
 		system("cls");
-		printf("\n Current step: %d \n", steps);
-		field.print_field();
-		printf("________________________\n\n");
-		printf(" Input the next command: ");
+		std::cout<<"\n Current step:"<<steps<<std::endl;
+		std::cout<<field<<std::endl;
+		std::cout << "________________________" << std::endl << std::endl;
+		std::cout<<" Input the next command: ";
 	}
 
 	Game::Game(int width, int height) : field(Field(width, height)), steps(0) {
 		system("cls");
-		printf("Hello! It's 'The Game of Life'\n\n");
-		printf("write 'start' to start \n\n");
-		printf("________________________\n\n");
-		printf(" Input the next command: ");
+		std::cout << "Hello! It's 'The Game of Life'" << std::endl << std::endl;
+		std::cout << "write 'start' to start" << std::endl << std::endl;
+		std::cout << "________________________" << std::endl << std::endl;
+		std::cout<<" Input the next command: ";
+	}
+
+	void Game::end(){
+		Game::save("save.txt");
+		throw(1);
 	}
 
 	Game::~Game(){};
@@ -166,7 +171,7 @@ namespace Life{
 				else if (args[0] == "save" || args[0] == "load") {
 					args[1] = command.substr(i + 1, 100);
 				}
-				else if (args[0] == "start" || args[0] == "back" || args[0] == "reset"){
+				else if (args[0] == "start" || args[0] == "back" || args[0] == "reset" || args[0] == "end"){
 					throw my_invalid_argument(args[0]);
 				}
 				break;
@@ -181,6 +186,9 @@ namespace Life{
 		}
 		else*/ if (command == "start") {
 			start();
+		}
+		else if (command == "end"){
+			end();
 		}
 		else if (command == "back") {
 			back();

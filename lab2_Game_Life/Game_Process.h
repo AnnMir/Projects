@@ -18,6 +18,7 @@ namespace Life{
 		void reset();
 		void save(std::string);
 		void load(std::string);
+		void end();
 	public:
 		Game(int, int);
 		~Game();

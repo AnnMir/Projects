@@ -78,22 +78,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="G:\2 курс\ООП\Лабы\lab2_game_life\lab2_game_life\Cell.cpp" />
-    <ClCompile Include="G:\2 курс\ООП\Лабы\lab2_game_life\lab2_game_life\Field.cpp" />
-    <ClCompile Include="G:\2 курс\ООП\Лабы\lab2_game_life\lab2_game_life\Game_Process.cpp" />
-    <ClCompile Include="G:\2 курс\ООП\Лабы\lab2_game_life\lab2_game_life\main.cpp" />
-    <ClCompile Include="G:\2 курс\ООП\Лабы\lab2_game_life\lab2_game_life\My_exception.cpp" />
-    <ClCompile Include="test.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="G:\2 курс\ООП\Лабы\lab2_game_life\lab2_game_life\Cell.h" />
-    <ClInclude Include="G:\2 курс\ООП\Лабы\lab2_game_life\lab2_game_life\Field.h" />
-    <ClInclude Include="G:\2 курс\ООП\Лабы\lab2_game_life\lab2_game_life\Game_Process.h" />
-    <ClInclude Include="G:\2 курс\ООП\Лабы\lab2_game_life\lab2_game_life\My_exception.h" />
+    <ClInclude Include="Cell.h" />
+    <ClInclude Include="Field.h" />
+    <ClInclude Include="Game_Process.h" />
+    <ClInclude Include="gmock.h" />
     <ClInclude Include="googletest\include\gtest\gtest.h" />
+    <ClInclude Include="gtest.h" />
+    <ClInclude Include="My_exception.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Cell.cpp" />
+    <ClCompile Include="Field.cpp" />
+    <ClCompile Include="Game_Process.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="My_exception.cpp" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

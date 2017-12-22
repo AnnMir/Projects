@@ -8,9 +8,9 @@ namespace Life {
 
 	void my_exception::get_message() {
 		system("cls");
-		printf("%s", message.c_str());
-		printf("________________________\n\n");
-		printf(" Input the next command: ");
+		std::cout<< message.c_str();
+		std::cout<<"________________________"<<std::endl<<std::endl;
+		std::cout<<" Input the next command: ";
 	}
 
 	my_constructor_error::my_constructor_error(const std::string class_name) {
@@ -31,8 +31,7 @@ namespace Life {
 	}
 
 	my_command_error::my_command_error(const std::string& command) : command(command) {
-		message = "\n Error: the command '" + command + "' is unknown or incorrect. Print 'help' to see the list of"
-			" allowed commands\n\n";
+		message = "\n Error: the command '" + command + "' is unknown or incorrect.\n\n";
 	}
 
 	my_invalid_argument::my_invalid_argument(const std::string& com) {

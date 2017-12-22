@@ -28,6 +28,7 @@ namespace Life{
 		std::string next();
 		void load_to_file(std::ofstream*);
 		void get_from_file(std::ifstream*);
+		friend std::ostream& operator<<(std::ostream&, const Field& );
 		~Field();
 	};
 }
